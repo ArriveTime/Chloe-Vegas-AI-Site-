@@ -3,373 +3,642 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="Your Vegas VIP Journey. Explore luxury Las Vegas resorts, entertainment, dining, nightlife, shopping and unforgettable experiences with Chloe.">
 <title>Your Vegas VIP Journey | Meet Chloe</title>
 
-<meta name="description" content="Welcome to Your Vegas VIP Journey. Meet Chloe, your virtual Las Vegas hostess, and explore luxury resorts, VIP nightlife, fine dining, entertainment, transportation and unforgettable Las Vegas experiences. Free to explore.">
-
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#100719">
-
 <style>
-:root{
-  --black:#0c0713;
-  --purple:#281039;
-  --purple2:#431b59;
-  --gold:#f3c76b;
-  --gold2:#ffe6a4;
-  --white:#fff;
-  --muted:#d6cddd;
-  --pink:#e94a9d;
-  --cyan:#38d8ed;
+:root {
+  --gold: #ffd78a;
+  --purple: #170b2c;
+  --pink: #f044a2;
+  --white: #ffffff;
 }
 
-*{box-sizing:border-box}
-
-html{scroll-behavior:smooth}
-
-body{
-  margin:0;
-  background:var(--black);
-  color:white;
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
+* {
+  box-sizing: border-box;
 }
 
-a{text-decoration:none;color:inherit}
-
-button,select{font:inherit}
-
-button{cursor:pointer}
-
-.topline{
-  height:5px;
-  background:linear-gradient(90deg,#ff3b8d,#f3c76b,#38d8ed,#8d4bff,#ff3b8d);
+html {
+  scroll-behavior: smooth;
 }
 
-header{
-  background:rgba(12,7,19,.96);
-  border-bottom:1px solid rgba(243,199,107,.25);
-  position:sticky;
-  top:0;
-  z-index:100;
+body {
+  margin: 0;
+  background: #12091f;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.nav{
-  max-width:1250px;
-  margin:auto;
-  padding:16px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.brand{
-  color:var(--gold);
-  font-family:Georgia,serif;
-  font-weight:bold;
-  font-size:24px;
-  letter-spacing:.5px;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-.navlinks{
-  display:flex;
-  flex-wrap:wrap;
-  gap:22px;
-  align-items:center;
+.top-line {
+  height: 5px;
+  background: linear-gradient(90deg, #f044a2, #ffd78a, #5cdcff, #9b59ff);
 }
 
-.navlinks a{
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:1px;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(18, 9, 31, 0.97);
+  border-bottom: 1px solid rgba(255, 215, 138, 0.3);
 }
 
-.navlinks a:hover{color:var(--gold)}
-
-.langselect{
-  background:#23112f;
-  color:white;
-  border:1px solid var(--gold);
-  padding:10px 13px;
-  border-radius:6px;
-  max-width:155px;
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 17px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-/* LAS VEGAS HERO */
+.logo {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
 
-.hero{
-  min-height:680px;
-  position:relative;
-  display:flex;
-  align-items:center;
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.hero {
   background:
-    linear-gradient(90deg,rgba(9,4,19,.93),rgba(13,5,27,.65),rgba(13,5,27,.25)),
-    url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=2000&q=90");
-  background-size:cover;
-  background-position:center;
+    linear-gradient(90deg, rgba(15, 5, 31, 0.91), rgba(15, 5, 31, 0.56)),
+    url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=2000&q=85");
+  background-position: center;
+  background-size: cover;
 }
 
-.hero-inner{
-  width:100%;
-  max-width:1250px;
-  margin:auto;
-  padding:65px 24px;
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  align-items:center;
-  gap:45px;
+.hero-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 45px;
+  align-items: center;
 }
 
-.eyebrow{
-  color:var(--gold);
-  font-weight:900;
-  letter-spacing:3px;
-  font-size:13px;
-  margin-bottom:16px;
+.hero-inner > * {
+  min-width: 0;
 }
 
-.hero h1{
-  font-family:Georgia,serif;
-  font-size:clamp(46px,6.5vw,86px);
-  line-height:1.05;
-  margin:0 0 18px;
-  text-shadow:0 5px 22px rgba(0,0,0,.5);
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
 
-.hero h1 span{color:var(--gold)}
-
-.hero-description{
-  max-width:640px;
-  font-size:19px;
-  color:#f1eaf5;
-  text-shadow:0 2px 12px #000;
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 1.08;
+  margin: 18px 0;
 }
 
-.hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:13px;
-  margin-top:28px;
+.hero h1 span {
+  color: var(--gold);
 }
 
-.btn{
-  border:0;
-  border-radius:6px;
-  display:inline-block;
-  padding:15px 23px;
-  font-size:13px;
-  font-weight:900;
-  letter-spacing:1px;
-  transition:.2s;
-  text-align:center;
+.hero p {
+  font-size: 18px;
+  color: #f3e8fa;
+  max-width: 580px;
 }
 
-.btn:hover{transform:translateY(-3px)}
-
-.btn-gold{
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
-  color:#170c21;
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
 }
 
-.btn-outline{
-  border:1px solid var(--gold);
-  color:white;
-  background:rgba(12,7,19,.5);
+.button {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 7px;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
 }
 
-/* CHLOE */
-
-.chloe-panel{
-  max-width:410px;
-  width:100%;
-  justify-self:center;
-  background:rgba(18,8,30,.90);
-  border:1px solid rgba(243,199,107,.55);
-  border-radius:20px;
-  padding:18px;
-  box-shadow:0 20px 70px rgba(0,0,0,.5);
-  text-align:center;
+.button-gold {
+  color: #24102d;
+  background: linear-gradient(120deg, #ffebbb, #eeb452);
 }
 
-.chloe-photo{
-  height:365px;
-  border-radius:14px;
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(145deg,rgba(30,11,48,.15),rgba(0,0,0,.5)),
-    url("chloe.jpg") center 28%/cover no-repeat,
-    linear-gradient(135deg,#7d4974,#1d102b);
+.button-outline {
+  border: 1px solid var(--gold);
+  background: rgba(25, 10, 40, 0.75);
 }
 
-.chloe-photo:after{
-  content:"CHLOE";
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  background:linear-gradient(transparent,rgba(0,0,0,.85));
-  padding:55px 15px 15px;
-  color:var(--gold);
-  font-family:Georgia,serif;
-  font-size:30px;
-  letter-spacing:5px;
+.chloe-card {
+  width: 100%;
+  max-width: 390px;
+  justify-self: center;
+  padding: 15px;
+  border: 1px solid rgba(255, 215, 138, 0.6);
+  border-radius: 18px;
+  background: rgba(23, 13, 41, 0.96);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  overflow: hidden;
 }
 
-.chloe-status{
-  margin-top:16px;
-  color:var(--gold);
-  font-size:12px;
-  font-weight:bold;
-  letter-spacing:2px;
+.chloe-picture {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #372144;
 }
 
-.chloe-panel h2{
-  margin:7px 0;
-  font-family:Georgia,serif;
-  font-size:26px;
+.chloe-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
-.chloe-panel p{
-  color:var(--muted);
-  font-size:14px;
-  margin:7px 0 17px;
+.chloe-card h2 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: var(--gold);
+  margin: 15px 0 6px;
 }
 
-.chloe-button{
-  width:100%;
-  background:linear-gradient(135deg,#f8dc91,#e6ac48);
-  color:#1c1027;
-  padding:15px;
-  border:0;
-  border-radius:7px;
-  font-weight:900;
-  font-size:14px;
+.chloe-card p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #e8d8ed;
 }
 
-.chloe-button:disabled{
-  opacity:.5;
-  cursor:not-allowed;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 65px 22px;
 }
 
-.audio-status{
-  font-size:12px;
-  color:#d4c8df;
-  min-height:22px;
-  margin-top:12px;
+.section-heading {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 36px;
 }
 
-.chloe-note{
-  font-size:11px!important;
-  color:#aa9bb7!important;
+.section-heading small {
+  color: var(--gold);
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-/* SECTIONS */
-
-section{padding:75px 22px}
-
-.container{
-  max-width:1220px;
-  margin:auto;
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 4vw, 45px);
+  margin: 12px 0;
 }
 
-.section-heading{
-  text-align:center;
-  margin:0 auto 42px;
-  max-width:850px;
+.section-heading p {
+  color: #e2d3eb;
 }
 
-.section-heading small{
-  color:var(--gold);
-  letter-spacing:3px;
-  font-weight:900;
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.section-heading h2{
-  font-family:Georgia,serif;
-  font-size:clamp(32px,4.5vw,49px);
-  margin:9px 0 13px;
-  line-height:1.15;
+.experience-card {
+  min-width: 0;
+  background: #28163a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 13px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.section-heading p{
-  color:var(--muted);
-  font-size:17px;
+.experience-card img {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
 }
 
-/* VIP EXPERIENCES */
-
-.experiences{
-  background:linear-gradient(180deg,#1b0c29,#0d0716);
+.experience-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.experience-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:23px;
+.experience-content h3 {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 22px;
+  margin: 0 0 10px;
 }
 
-.experience-card{
-  background:#1e102b;
-  border:1px solid rgba(243,199,107,.18);
-  border-radius:12px;
-  overflow:hidden;
-  transition:.25s;
+.experience-content p {
+  color: #e4d8e9;
+  font-size: 14px;
+  flex: 1;
+  margin: 0 0 16px;
 }
 
-.experience-card:hover{
-  transform:translateY(-5px);
-  border-color:var(--gold);
+.experience-content a {
+  color: #ffe2a1;
+  font-size: 13px;
+  font-weight: bold;
 }
 
-.experience-image{
-  height:190px;
-  background-size:cover;
-  background-position:center;
-  position:relative;
+.resorts-section {
+  background: #10091c;
 }
 
-.experience-image:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(transparent,rgba(10,4,20,.55));
+.resort-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
 }
 
-.experience-content{padding:23px}
-
-.experience-content h3{
-  font-family:Georgia,serif;
-  font-size:23px;
-  margin:0 0 8px;
-  color:var(--gold);
+.resort-grid a {
+  min-width: 0;
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 138, 0.5);
+  background: linear-gradient(130deg, #432355, #251336);
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+  transition: background 0.2s;
 }
 
-.experience-content p{
-  color:#d1c6db;
-  font-size:14px;
-  min-height:65px;
+.resort-grid a:hover {
+  background: #60337a;
+  color: var(--gold);
 }
 
-.experience-content a{
-  display:inline-block;
-  color:var(--gold2);
-  font-size:13px;
-  font-weight:bold;
-  margin-top:10px;
+.feature-section {
+  background: linear-gradient(115deg, #822968, #48218b, #153e74);
+  text-align: center;
 }
 
-/* IMAGE BACKGROUNDS */
-
-.img-hotels{
-  background-image:url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=900&q=85");
+.feature-section h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 4vw, 43px);
+  color: #ffe3a3;
+  margin-top: 0;
 }
 
-.img-dining{
-  background-image:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85");
+.feature-section p {
+  max-width: 750px;
+  margin: 15px auto 25px;
 }
 
-.img-nightlife{
-  background-image:url("https://images.unsplash.com/photo-157126602824
+.legal {
+  background: #0d0717;
+  color: #c9bcd2;
+  padding: 32px 22px;
+  font-size: 12px;
+}
+
+.legal-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.legal h3 {
+  color: var(--gold);
+}
+
+footer {
+  background: #080411;
+  text-align: center;
+  padding: 35px 18px;
+  color: #c7b9d1;
+}
+
+footer strong {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    text-align: center;
+    gap: 30px;
+    padding: 45px 20px;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .experience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resort-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  nav {
+    padding: 14px 15px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 11px;
+  }
+
+  .hero-inner {
+    padding: 38px 15px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .chloe-card {
+    max-width: 360px;
+  }
+
+  .container {
+    padding: 48px 15px;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card img {
+    height: 190px;
+  }
+
+  .resort-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resort-grid a {
+    min-height: 78px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .resort-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-line"></div>
+
+<header>
+  <nav>
+    <a class="logo" href="#home">YOUR VEGAS VIP JOURNEY</a>
+
+    <div class="nav-links">
+      <a href="#chloe">MEET CHLOE</a>
+      <a href="#experiences">EXPERIENCES</a>
+      <a href="#resorts">RESORTS</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+
+    <div>
+      <div class="eyebrow">WELCOME TO THE EXTRAORDINARY</div>
+
+      <h1>
+        YOUR VEGAS<br>
+        <span>VIP JOURNEY</span>
+      </h1>
+
+      <p>
+        Experience the lights, luxury and excitement of Las Vegas.
+        Discover world-famous resorts, unforgettable shows,
+        exceptional dining, nightlife and extraordinary VIP
+        experiences—all in one complimentary guide.
+      </p>
+
+      <div class="buttons">
+        <a class="button button-gold" href="#experiences">
+          EXPLORE LAS VEGAS
+        </a>
+
+        <a class="button button-outline" href="#chloe">
+          MEET CHLOE
+        </a>
+      </div>
+    </div>
+
+    <div class="chloe-card" id="chloe">
+
+      <div class="chloe-picture">
+        <img
+          src="chloe.jpg"
+          alt="Chloe, your Las Vegas virtual hostess, in her elegant evening dress"
+        >
+      </div>
+
+      <h2>Meet Chloe</h2>
+
+      <p>
+        Your Virtual Las Vegas Hostess
+      </p>
+
+      <p>
+        Welcome to your Vegas VIP journey.
+        Discover luxury, excitement and unforgettable
+        experiences in the entertainment capital of the world.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="experiences">
+  <div class="container">
+
+    <div class="section-heading">
+      <small>DISCOVER THE EXTRAORDINARY</small>
+      <h2>Your Las Vegas Experiences</h2>
+      <p>
+        From legendary entertainment and world-class dining
+        to spectacular resorts and unforgettable adventures.
+      </p>
+    </div>
+
+    <div class="experience-grid">
+
+      <article class="experience-card">
+        <img
+          src="https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=1000&q=85"
+          alt="Las Vegas nightlife"
+          loading="lazy"
+        >
+        <div class="experience-content">
+          <h3>VIP Nightlife</h3>
+          <p>
+            Explore Las Vegas nightclubs, lounges and
+            nightlife destinations.
+          </p>
+          <a href="https://www.visitlasvegas.com/" target="_blank" rel="noopener noreferrer">
+            EXPLORE NIGHTLIFE →
+          </a>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <img
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+          alt="Elegant restaurant interior"
+          loading="lazy"
+        >
+        <div class="experience-content">
+          <h3>Fine Dining</h3>
+          <p>
+            Discover celebrated restaurants, chef-driven
+            cuisine and extraordinary dining experiences.
+          </p>
+          <a href="https://www.visitlasvegas.com/restaurants/" target="_blank" rel="noopener noreferrer">
+            EXPLORE DINING →
+          </a>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <img
+          src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=85"
+          alt="Live entertainment performance"
+          loading="lazy"
+        >
+        <div class="experience-content">
+          <h3>Shows & Entertainment</h3>
+          <p>
+            Experience spectacular productions,
+            concerts, comedy and unforgettable live shows.
+          </p>
+          <a href="https://www.visitlasvegas.com/" target="_blank" rel="noopener noreferrer">
+            DISCOVER SHOWS →
+          </a>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <img
+          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury hotel"
+          loading="lazy"
+        >
+        <div class="experience-content">
+          <h3>Luxury Resorts</h3>
+          <p>
+            Explore iconic Las Vegas hotels,
+            luxurious suites and legendary hospitality.
+          </p>
+          <a href="#resorts">
+            VIEW RESORTS →
+          </a>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <img
+          src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury automobile travel"
+          loading="lazy"
+        >
+        <div class="experience-content">
+          <h3>Private Transportation</h3>
+          <p>
+            Discover airport transportation,
+            luxury vehicles and private travel options.
+          </p>
+          <a href="https://www.harryreidairport.com/" target="_blank" rel="noopener noreferrer">
+            AIRPORT INFORMATION →
+          </a>
+        </div>
+      </article>
+
+      <article class="experience-card">
+        <img
+          src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1000&q=85"
+          alt="Gaming entertainment"
+          loading="lazy"
+        >
+        <div class="experience-content">
+          <h3>Casino Experiences</h3>
+          <p>
+            Discover the excitement and atmosphere
+            of Las Vegas's world-famous casino resorts.
+          </p>
+          <a href="#resorts">
+            EXPLORE CASINOS →
+          </a>
+        </div>
+      </article>
+
+      <article class

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Your Vegas VIP Journey | Meet Chloe</title>
+
+<meta name="description" content="Welcome to Your Vegas VIP Journey. Meet Chloe, your virtual Las Vegas hostess, and explore luxury resorts, VIP nightlife, fine dining, entertainment, transportation and unforgettable Las Vegas experiences. Free to explore.">
+
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#100719">
+
+<style>
+:root{
+  --black:#0c0713;
+  --purple:#281039;
+  --purple2:#431b59;
+  --gold:#f3c76b;
+  --gold2:#ffe6a4;
+  --white:#fff;
+  --muted:#d6cddd;
+  --pink:#e94a9d;
+  --cyan:#38d8ed;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--black);
+  color:white;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit}
+
+button,select{font:inherit}
+
+button{cursor:pointer}
+
+.topline{
+  height:5px;
+  background:linear-gradient(90deg,#ff3b8d,#f3c76b,#38d8ed,#8d4bff,#ff3b8d);
+}
+
+header{
+  background:rgba(12,7,19,.96);
+  border-bottom:1px solid rgba(243,199,107,.25);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.nav{
+  max-width:1250px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-weight:bold;
+  font-size:24px;
+  letter-spacing:.5px;
+}
+
+.navlinks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+  align-items:center;
+}
+
+.navlinks a{
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.navlinks a:hover{color:var(--gold)}
+
+.langselect{
+  background:#23112f;
+  color:white;
+  border:1px solid var(--gold);
+  padding:10px 13px;
+  border-radius:6px;
+  max-width:155px;
+}
+
+/* LAS VEGAS HERO */
+
+.hero{
+  min-height:680px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(9,4,19,.93),rgba(13,5,27,.65),rgba(13,5,27,.25)),
+    url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=2000&q=90");
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-inner{
+  width:100%;
+  max-width:1250px;
+  margin:auto;
+  padding:65px 24px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  align-items:center;
+  gap:45px;
+}
+
+.eyebrow{
+  color:var(--gold);
+  font-weight:900;
+  letter-spacing:3px;
+  font-size:13px;
+  margin-bottom:16px;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(46px,6.5vw,86px);
+  line-height:1.05;
+  margin:0 0 18px;
+  text-shadow:0 5px 22px rgba(0,0,0,.5);
+}
+
+.hero h1 span{color:var(--gold)}
+
+.hero-description{
+  max-width:640px;
+  font-size:19px;
+  color:#f1eaf5;
+  text-shadow:0 2px 12px #000;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+  margin-top:28px;
+}
+
+.btn{
+  border:0;
+  border-radius:6px;
+  display:inline-block;
+  padding:15px 23px;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:1px;
+  transition:.2s;
+  text-align:center;
+}
+
+.btn:hover{transform:translateY(-3px)}
+
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#170c21;
+}
+
+.btn-outline{
+  border:1px solid var(--gold);
+  color:white;
+  background:rgba(12,7,19,.5);
+}
+
+/* CHLOE */
+
+.chloe-panel{
+  max-width:410px;
+  width:100%;
+  justify-self:center;
+  background:rgba(18,8,30,.90);
+  border:1px solid rgba(243,199,107,.55);
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 20px 70px rgba(0,0,0,.5);
+  text-align:center;
+}
+
+.chloe-photo{
+  height:365px;
+  border-radius:14px;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(145deg,rgba(30,11,48,.15),rgba(0,0,0,.5)),
+    url("chloe.jpg") center 28%/cover no-repeat,
+    linear-gradient(135deg,#7d4974,#1d102b);
+}
+
+.chloe-photo:after{
+  content:"CHLOE";
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background:linear-gradient(transparent,rgba(0,0,0,.85));
+  padding:55px 15px 15px;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:30px;
+  letter-spacing:5px;
+}
+
+.chloe-status{
+  margin-top:16px;
+  color:var(--gold);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.chloe-panel h2{
+  margin:7px 0;
+  font-family:Georgia,serif;
+  font-size:26px;
+}
+
+.chloe-panel p{
+  color:var(--muted);
+  font-size:14px;
+  margin:7px 0 17px;
+}
+
+.chloe-button{
+  width:100%;
+  background:linear-gradient(135deg,#f8dc91,#e6ac48);
+  color:#1c1027;
+  padding:15px;
+  border:0;
+  border-radius:7px;
+  font-weight:900;
+  font-size:14px;
+}
+
+.chloe-button:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+}
+
+.audio-status{
+  font-size:12px;
+  color:#d4c8df;
+  min-height:22px;
+  margin-top:12px;
+}
+
+.chloe-note{
+  font-size:11px!important;
+  color:#aa9bb7!important;
+}
+
+/* SECTIONS */
+
+section{padding:75px 22px}
+
+.container{
+  max-width:1220px;
+  margin:auto;
+}
+
+.section-heading{
+  text-align:center;
+  margin:0 auto 42px;
+  max-width:850px;
+}
+
+.section-heading small{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-weight:900;
+}
+
+.section-heading h2{
+  font-family:Georgia,serif;
+  font-size:clamp(32px,4.5vw,49px);
+  margin:9px 0 13px;
+  line-height:1.15;
+}
+
+.section-heading p{
+  color:var(--muted);
+  font-size:17px;
+}
+
+/* VIP EXPERIENCES */
+
+.experiences{
+  background:linear-gradient(180deg,#1b0c29,#0d0716);
+}
+
+.experience-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:23px;
+}
+
+.experience-card{
+  background:#1e102b;
+  border:1px solid rgba(243,199,107,.18);
+  border-radius:12px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.experience-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--gold);
+}
+
+.experience-image{
+  height:190px;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+
+.experience-image:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent,rgba(10,4,20,.55));
+}
+
+.experience-content{padding:23px}
+
+.experience-content h3{
+  font-family:Georgia,serif;
+  font-size:23px;
+  margin:0 0 8px;
+  color:var(--gold);
+}
+
+.experience-content p{
+  color:#d1c6db;
+  font-size:14px;
+  min-height:65px;
+}
+
+.experience-content a{
+  display:inline-block;
+  color:var(--gold2);
+  font-size:13px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+/* IMAGE BACKGROUNDS */
+
+.img-hotels{
+  background-image:url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=900&q=85");
+}
+
+.img-dining{
+  background-image:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85");
+}
+
+.img-nightlife{
+  background-image:url("https://images.unsplash.com/photo-157126602824

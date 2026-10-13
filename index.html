@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Your Vegas VIP Journey. Explore luxury Las Vegas resorts, entertainment, dining, nightlife, shopping and unforgettable experiences with Chloe.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Your Vegas VIP Journey with Chloe. Discover Las Vegas luxury resorts, fine dining, nightlife, entertainment, shopping, spas and unforgettable experiences.">
+<meta name="theme-color" content="#160b29">
 <title>Your Vegas VIP Journey | Meet Chloe</title>
 
 <style>
 :root {
-  --gold: #ffd78a;
-  --purple: #170b2c;
-  --pink: #f044a2;
-  --white: #ffffff;
+  --bg: #14091f;
+  --panel: #251435;
+  --gold: #f7d28a;
+  --pink: #e84da9;
+  --white: #fff;
+  --muted: #dfd2e8;
 }
 
 * {
@@ -24,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  background: #12091f;
+  background: var(--bg);
   color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -43,39 +46,45 @@ img {
 
 .top-line {
   height: 5px;
-  background: linear-gradient(90deg, #f044a2, #ffd78a, #5cdcff, #9b59ff);
+  background: linear-gradient(
+    90deg,
+    #ff54b6,
+    #f7d28a,
+    #4ed8ff,
+    #a26aff
+  );
 }
 
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(18, 9, 31, 0.97);
-  border-bottom: 1px solid rgba(255, 215, 138, 0.3);
+  background: rgba(17, 7, 29, 0.97);
+  border-bottom: 1px solid rgba(247, 210, 138, 0.35);
 }
 
 nav {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: auto;
   padding: 17px 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 15px;
 }
 
 .logo {
   color: var(--gold);
-  font-weight: bold;
   font-size: 21px;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
   font-size: 13px;
   font-weight: bold;
 }
@@ -86,16 +95,20 @@ nav {
 
 .hero {
   background:
-    linear-gradient(90deg, rgba(15, 5, 31, 0.91), rgba(15, 5, 31, 0.56)),
-    url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=2000&q=85");
+    linear-gradient(
+      90deg,
+      rgba(13, 5, 27, 0.94),
+      rgba(20, 7, 38, 0.7)
+    ),
+    url("https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=2000&q=90");
   background-position: center;
   background-size: cover;
 }
 
 .hero-inner {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: auto;
-  padding: 70px 22px;
+  padding: 65px 22px;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 45px;
@@ -109,13 +122,13 @@ nav {
 .eyebrow {
   color: var(--gold);
   font-size: 12px;
-  letter-spacing: 3px;
   font-weight: bold;
+  letter-spacing: 3px;
 }
 
 .hero h1 {
   font-family: Georgia, serif;
-  font-size: clamp(42px, 6vw, 78px);
+  font-size: clamp(40px, 6vw, 76px);
   line-height: 1.08;
   margin: 18px 0;
 }
@@ -125,9 +138,9 @@ nav {
 }
 
 .hero p {
-  font-size: 18px;
-  color: #f3e8fa;
   max-width: 580px;
+  color: #f2e5f9;
+  font-size: 18px;
 }
 
 .buttons {
@@ -137,76 +150,81 @@ nav {
   margin-top: 26px;
 }
 
-.button {
+.btn {
   display: inline-block;
-  padding: 14px 20px;
+  padding: 14px 21px;
   border-radius: 7px;
-  font-weight: bold;
   font-size: 13px;
+  font-weight: bold;
   text-align: center;
+  transition: transform 0.2s;
 }
 
-.button-gold {
-  color: #24102d;
-  background: linear-gradient(120deg, #ffebbb, #eeb452);
+.btn:hover {
+  transform: translateY(-2px);
 }
 
-.button-outline {
+.btn-gold {
+  background: linear-gradient(120deg, #ffebbd, #e7b85e);
+  color: #231029;
+}
+
+.btn-outline {
   border: 1px solid var(--gold);
-  background: rgba(25, 10, 40, 0.75);
+  background: rgba(20, 9, 35, 0.75);
 }
 
 .chloe-card {
   width: 100%;
-  max-width: 390px;
+  max-width: 400px;
   justify-self: center;
-  padding: 15px;
-  border: 1px solid rgba(255, 215, 138, 0.6);
+  background: rgba(31, 16, 48, 0.97);
+  padding: 14px;
+  border: 1px solid rgba(247, 210, 138, 0.65);
   border-radius: 18px;
-  background: rgba(23, 13, 41, 0.96);
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
   text-align: center;
   overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
-.chloe-picture {
+.chloe-photo {
   width: 100%;
-  border-radius: 12px;
   overflow: hidden;
-  background: #372144;
+  border-radius: 12px;
+  background: #362042;
 }
 
-.chloe-picture img {
-  display: block;
+.chloe-photo img {
   width: 100%;
   height: auto;
+  max-height: 550px;
   object-fit: contain;
-  object-position: center;
+  object-position: center top;
 }
 
 .chloe-card h2 {
-  font-family: Georgia, serif;
-  font-size: 30px;
   color: var(--gold);
-  margin: 15px 0 6px;
+  font-family: Georgia, serif;
+  font-size: 31px;
+  margin: 16px 0 4px;
 }
 
 .chloe-card p {
+  color: #e9dced;
   font-size: 14px;
   margin: 8px 0;
-  color: #e8d8ed;
 }
 
-.container {
-  max-width: 1200px;
+.wrap {
+  max-width: 1250px;
   margin: auto;
   padding: 65px 22px;
 }
 
 .section-heading {
-  text-align: center;
   max-width: 850px;
-  margin: 0 auto 36px;
+  margin: 0 auto 38px;
+  text-align: center;
 }
 
 .section-heading small {
@@ -217,86 +235,102 @@ nav {
 
 .section-heading h2 {
   font-family: Georgia, serif;
-  font-size: clamp(30px, 4vw, 45px);
+  font-size: clamp(30px, 4vw, 44px);
   margin: 12px 0;
 }
 
 .section-heading p {
-  color: #e2d3eb;
+  color: var(--muted);
 }
 
-.experience-grid {
+.experiences {
+  background: #1b0e30;
+}
+
+.cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 22px;
 }
 
-.experience-card {
+.card {
   min-width: 0;
-  background: #28163a;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 13px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  background: #29173b;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, border-color 0.2s;
 }
 
-.experience-card img {
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+.card-image {
   width: 100%;
-  height: 195px;
+  height: 210px;
+  background: #43265b;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.experience-content {
-  padding: 20px;
+.card-content {
+  padding: 21px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 
-.experience-content h3 {
-  color: var(--gold);
+.card-content h3 {
   font-family: Georgia, serif;
+  color: var(--gold);
   font-size: 22px;
-  margin: 0 0 10px;
+  margin: 0 0 9px;
 }
 
-.experience-content p {
-  color: #e4d8e9;
+.card-content p {
+  color: #e7dbe9;
   font-size: 14px;
+  margin: 0 0 18px;
   flex: 1;
-  margin: 0 0 16px;
 }
 
-.experience-content a {
-  color: #ffe2a1;
+.card-content a {
+  color: #ffe3aa;
   font-size: 13px;
   font-weight: bold;
 }
 
-.resorts-section {
-  background: #10091c;
+.resorts {
+  background: #11091e;
 }
 
 .resort-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  gap: 15px;
 }
 
-.resort-grid a {
+.resort {
   min-width: 0;
-  min-height: 95px;
+  min-height: 100px;
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
   text-align: center;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 215, 138, 0.5);
-  background: linear-gradient(130deg, #432355, #251336);
-  color: white;
+  background: linear-gradient(135deg, #472558, #241234);
+  border: 1px solid rgba(247, 210, 138, 0.5);
+  border-radius: 11px;
   font-family: Georgia, serif;
   font-size: 18px;
   font-weight: bold;
@@ -304,68 +338,74 @@ nav {
   transition: background 0.2s;
 }
 
-.resort-grid a:hover {
-  background: #60337a;
+.resort:hover {
+  background: #62377a;
   color: var(--gold);
 }
 
-.feature-section {
-  background: linear-gradient(115deg, #822968, #48218b, #153e74);
+.cta {
+  background: linear-gradient(
+    120deg,
+    #8b286d,
+    #50238a,
+    #183d78
+  );
   text-align: center;
 }
 
-.feature-section h2 {
+.cta h2 {
   font-family: Georgia, serif;
-  font-size: clamp(30px, 4vw, 43px);
-  color: #ffe3a3;
+  font-size: clamp(30px, 4vw, 44px);
+  color: #ffe5ab;
   margin-top: 0;
 }
 
-.feature-section p {
-  max-width: 750px;
-  margin: 15px auto 25px;
+.cta p {
+  max-width: 780px;
+  margin: 15px auto 26px;
 }
 
-.legal {
-  background: #0d0717;
-  color: #c9bcd2;
-  padding: 32px 22px;
-  font-size: 12px;
+.disclaimers {
+  background: #0e0718;
+  color: #cbbdd4;
+  font-size: 13px;
+  padding: 35px 22px;
+  border-top: 1px solid rgba(247, 210, 138, 0.25);
 }
 
-.legal-inner {
-  max-width: 1100px;
+.disclaimers-inner {
+  max-width: 1150px;
   margin: auto;
 }
 
-.legal h3 {
+.disclaimers h3 {
   color: var(--gold);
+  font-size: 17px;
 }
 
 footer {
-  background: #080411;
+  padding: 34px 18px;
   text-align: center;
-  padding: 35px 18px;
-  color: #c7b9d1;
+  background: #080410;
+  color: #cbbdd4;
 }
 
 footer strong {
   color: var(--gold);
   font-family: Georgia, serif;
-  font-size: 23px;
+  font-size: 24px;
 }
 
 footer p {
   font-size: 12px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .hero-inner {
     grid-template-columns: 1fr;
-    max-width: 720px;
     text-align: center;
-    gap: 30px;
-    padding: 45px 20px;
+    max-width: 750px;
+    padding: 48px 20px;
   }
 
   .hero p {
@@ -377,7 +417,7 @@ footer p {
     justify-content: center;
   }
 
-  .experience-grid {
+  .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -386,9 +426,9 @@ footer p {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
   nav {
-    padding: 14px 15px;
+    padding: 14px;
   }
 
   .logo {
@@ -396,16 +436,17 @@ footer p {
   }
 
   .nav-links {
-    gap: 12px;
     font-size: 11px;
+    gap: 12px;
   }
 
   .hero-inner {
     padding: 38px 15px;
+    gap: 30px;
   }
 
   .hero h1 {
-    font-size: clamp(36px, 10vw, 52px);
+    font-size: clamp(35px, 10vw, 52px);
   }
 
   .hero p {
@@ -416,229 +457,8 @@ footer p {
     max-width: 360px;
   }
 
-  .container {
+  .wrap {
     padding: 48px 15px;
   }
 
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .experience-card img {
-    height: 190px;
-  }
-
-  .resort-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .resort-grid a {
-    min-height: 78px;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 350px) {
-  .resort-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<div class="top-line"></div>
-
-<header>
-  <nav>
-    <a class="logo" href="#home">YOUR VEGAS VIP JOURNEY</a>
-
-    <div class="nav-links">
-      <a href="#chloe">MEET CHLOE</a>
-      <a href="#experiences">EXPERIENCES</a>
-      <a href="#resorts">RESORTS</a>
-    </div>
-  </nav>
-</header>
-
-<main>
-
-<section class="hero" id="home">
-  <div class="hero-inner">
-
-    <div>
-      <div class="eyebrow">WELCOME TO THE EXTRAORDINARY</div>
-
-      <h1>
-        YOUR VEGAS<br>
-        <span>VIP JOURNEY</span>
-      </h1>
-
-      <p>
-        Experience the lights, luxury and excitement of Las Vegas.
-        Discover world-famous resorts, unforgettable shows,
-        exceptional dining, nightlife and extraordinary VIP
-        experiences—all in one complimentary guide.
-      </p>
-
-      <div class="buttons">
-        <a class="button button-gold" href="#experiences">
-          EXPLORE LAS VEGAS
-        </a>
-
-        <a class="button button-outline" href="#chloe">
-          MEET CHLOE
-        </a>
-      </div>
-    </div>
-
-    <div class="chloe-card" id="chloe">
-
-      <div class="chloe-picture">
-        <img
-          src="chloe.jpg"
-          alt="Chloe, your Las Vegas virtual hostess, in her elegant evening dress"
-        >
-      </div>
-
-      <h2>Meet Chloe</h2>
-
-      <p>
-        Your Virtual Las Vegas Hostess
-      </p>
-
-      <p>
-        Welcome to your Vegas VIP journey.
-        Discover luxury, excitement and unforgettable
-        experiences in the entertainment capital of the world.
-      </p>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="experiences">
-  <div class="container">
-
-    <div class="section-heading">
-      <small>DISCOVER THE EXTRAORDINARY</small>
-      <h2>Your Las Vegas Experiences</h2>
-      <p>
-        From legendary entertainment and world-class dining
-        to spectacular resorts and unforgettable adventures.
-      </p>
-    </div>
-
-    <div class="experience-grid">
-
-      <article class="experience-card">
-        <img
-          src="https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=1000&q=85"
-          alt="Las Vegas nightlife"
-          loading="lazy"
-        >
-        <div class="experience-content">
-          <h3>VIP Nightlife</h3>
-          <p>
-            Explore Las Vegas nightclubs, lounges and
-            nightlife destinations.
-          </p>
-          <a href="https://www.visitlasvegas.com/" target="_blank" rel="noopener noreferrer">
-            EXPLORE NIGHTLIFE →
-          </a>
-        </div>
-      </article>
-
-      <article class="experience-card">
-        <img
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
-          alt="Elegant restaurant interior"
-          loading="lazy"
-        >
-        <div class="experience-content">
-          <h3>Fine Dining</h3>
-          <p>
-            Discover celebrated restaurants, chef-driven
-            cuisine and extraordinary dining experiences.
-          </p>
-          <a href="https://www.visitlasvegas.com/restaurants/" target="_blank" rel="noopener noreferrer">
-            EXPLORE DINING →
-          </a>
-        </div>
-      </article>
-
-      <article class="experience-card">
-        <img
-          src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=85"
-          alt="Live entertainment performance"
-          loading="lazy"
-        >
-        <div class="experience-content">
-          <h3>Shows & Entertainment</h3>
-          <p>
-            Experience spectacular productions,
-            concerts, comedy and unforgettable live shows.
-          </p>
-          <a href="https://www.visitlasvegas.com/" target="_blank" rel="noopener noreferrer">
-            DISCOVER SHOWS →
-          </a>
-        </div>
-      </article>
-
-      <article class="experience-card">
-        <img
-          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=85"
-          alt="Luxury hotel"
-          loading="lazy"
-        >
-        <div class="experience-content">
-          <h3>Luxury Resorts</h3>
-          <p>
-            Explore iconic Las Vegas hotels,
-            luxurious suites and legendary hospitality.
-          </p>
-          <a href="#resorts">
-            VIEW RESORTS →
-          </a>
-        </div>
-      </article>
-
-      <article class="experience-card">
-        <img
-          src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1000&q=85"
-          alt="Luxury automobile travel"
-          loading="lazy"
-        >
-        <div class="experience-content">
-          <h3>Private Transportation</h3>
-          <p>
-            Discover airport transportation,
-            luxury vehicles and private travel options.
-          </p>
-          <a href="https://www.harryreidairport.com/" target="_blank" rel="noopener noreferrer">
-            AIRPORT INFORMATION →
-          </a>
-        </div>
-      </article>
-
-      <article class="experience-card">
-        <img
-          src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1000&q=85"
-          alt="Gaming entertainment"
-          loading="lazy"
-        >
-        <div class="experience-content">
-          <h3>Casino Experiences</h3>
-          <p>
-            Discover the excitement and atmosphere
-            of Las Vegas's world-famous casino resorts.
-          </p>
-          <a href="#resorts">
-            EXPLORE CASINOS →
-          </a>
-        </div>
-      </article>
-
-      <article class
+  .cards {
